@@ -92,3 +92,63 @@ div {
 .left { text-align: left; }
 .center { text-align: center; }
 .right { text-align: right; }
+
+
+/* 
+    입력창 디자인(input/select/textarea)
+*/
+.field {
+    outline: none; /* 기본 강조효과 제거 */
+    font-size: 16px; /* 기본 글자크기 지정 */
+    padding: 0.5em 0.75em;
+    border: 1px solid #636e72;
+    border-radius: 0.1em;
+}
+.field:focus {
+    border-color: #313739;
+}
+textarea.field {
+    resize: vertical;
+}
+
+/*
+    버튼 디자인
+    - a태그와 button을 동일하게 디자인
+    - 버튼마다 역할이 다름
+        - 긍정버튼 : 현재 페이지의 목적을 달성할 수 있거나 긍정적인 영향을 주는 작업 버튼
+        - 부정버튼 : 현재 페이지의 목적이 부정적인 작업인 경우(수정/삭제) 위험성을 알려주는 버튼
+        - 중립버튼 : 현재 페이지의 목적과 관계없는 작업 버튼
+*/
+.btn {
+    outline: none;
+    font-size: 16px;
+    padding: 0.5em 0.75em;
+    cursor: pointer;
+    border: 1px solid #636e72;
+    border-radius: 0.1em;
+    /* a태그까지 고려한 디자인 추가 */
+    text-decoration: none;
+    color: #2d3436;
+    background-color: #f2f2f2;
+    display: inline-block;
+    text-align: center;
+}
+.btn:hover {
+    /* filter: brightness(90%); */
+    filter: brightness(0.9);
+}
+.btn.btn-positive {
+    background-color: #0984e3;
+    border-color: #0984e3;
+    color: white;
+}
+.btn.btn-negative {
+    background-color: #d63031;
+    border-color: #d63031;
+    color: white;
+}
+.btn.btn-neutral {
+    background-color: #636e72;
+    border-color: #636e72;
+    color: white;
+}
