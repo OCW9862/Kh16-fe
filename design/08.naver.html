@@ -1,39 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네이버 로그인</title>
+    <title>네이버 : 로그인</title>
+
+    <!-- css 파일을 불러오는 코드 -->
+    <link rel="stylesheet" type="text/css" href="./commons.css">
     <style>
-        *{
-            box-sizing: border-box;
+        /* 불러온 css파일 외에 추가 디자인 코드를 이곳에 작성 */
+        .container {
+            width: 400px;
+            margin: 50px auto;
         }
-        h1 { 
+        .cell {
+            margin: 10px 0;
+        }
+        .center {
             text-align: center;
-            font-size: 50px;
-            color: #2ecc71;
-            font-family: 고딕체;
-            font-style: oblique;
         }
-        input, button {
-            display: block;
-            width: 390px;
-            padding: 0.6em;
+        .left {
+            text-align: left;
         }
-        input{
-            margin: 0px auto;
+        .right {
+            text-align: right;
         }
-        button{
-            background-color: #2ecc71;
-            margin: 15px auto;
-            
+
+        .field {
+            width: 100%;
+            font-size: 20px;
+            padding: 0.5em;
+            border: 1px solid #636e72;
+            outline: none; /* 선택 시 강조 효과 제거 */
+        }
+        [name=memberId] {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: none;
+        }
+        [name=memberPw] {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0.5em;
+            border: none;
+            border-radius: 5px;
+            background-color: #2bd400;
+            color: white;
+            cursor: pointer;
+        }
+        /* 
+            상태(조건부) 디자인 
+            :hover 를 뒤에 붙이면 "마우스가 올라갔을 때" 적용될 디자인을 의미
+            :focus 를 뒤에 붙이면 "해당 태그에 포커스가 맞춰줬을 때" 적용될 디자인을 의미
+        */
+        .btn:hover {
+            background-color: #2bab00;
+        }
+        .field:focus {
+            border-color: #2bd400;
         }
     </style>
 </head>
 <body>
-    <h1>NAVER</h1>
-    <input type="text" name="" placeholder="아이디">
-    <input type="password" name="" placeholder="비밀번호">
-    <button>로그인</button>
+    <div class="container">
+        <div class="cell center">
+            <img src="./images/Naver.png" width="200">            
+        </div>
+        <div class="cell">
+            <input type="text" name="memberId" placeholder="아이디" class="field">
+            <input type="password" name="memberPw" placeholder="비밀번호" class="field">
+        </div>
+        <div class="cell">
+            <button class="btn">로그인</button>
+        </div>
+    </div>
 </body>
 </html>
