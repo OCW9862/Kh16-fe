@@ -1,17 +1,94 @@
 /*
     디자인 파일(css)
-    -<style> 내부에 작성하는 디자인 코드만 보관하는 파일
-    - html에서 불러올떄는 <link> 태그를 사용
+    - <style> 내부에 작성하는 디자인 코드만 보관하는 파일
+    - html에서 불러올때는 <link> 태그를 사용
     - html 파일에서 이 디자인 파일을 불러오면 자동으로 대상을 찾아서 디자인을 적용
     - 홈페이지에서 자주 사용하는 디자인 코드를 모아서 이곳에 저장
 */
 
-/*영역을 시각화하는 테스트 디자인 코드 */
+/* 영역을 시각화하는 테스트 디자인 코드 */
 div {
-    /*box-shadow: 0 0 1px 0 grey;*/
+    box-shadow: 0 0 1px 0 grey;
 }
 
 * {
     box-sizing: border-box;
     font-family: 고딕;
 }
+
+/*
+    컨테이너와 셀 디자인
+    - 컨테이너(container) : 작은 화면 한 개를 표현하기 위한 단위영역 (폭과 가운데 정렬이 중요)
+        - 자주 사용하는 폭을 전부다 정의해둠 (마치 운동화처럼)
+    - 셀(cell) : 컨테이너 안에 배치되는 하나의 공간 (다른 셀과의 간격)
+*/
+.container {
+    margin:0 auto;
+}
+
+.w-25 { width:25%; }
+.w-50 { width:50%; }
+.w-75 { width:75%; }
+.w-100 { width:100%; }
+
+.w-150 { width:150px; }
+.w-200 { width: 200px; }
+.w-250 { width: 250px; }
+.w-300 { width: 300px; }
+.w-350 { width: 300px; }
+.w-400 { width: 400px; }
+.w-450 { width: 450px; }
+.w-500 { width: 500px; }
+.w-550 { width: 550px; }
+.w-600 { width: 600px; }
+.w-650 { width: 650px; }
+.w-700 { width: 700px; }
+.w-750 { width: 750px; }
+.w-800 { width: 800px; }
+.w-850 { width: 850px; }
+.w-900 { width: 900px; }
+.w-950 { width: 950px; }
+.w-1000 { width: 1000px; }
+.w-1050 { width: 1050px; }
+.w-1100 { width: 1100px; }
+
+.cell {
+    margin: 10px 0;
+}
+/* 
+    여백을 모듈화 시켜서 클래스로 구현 
+    - 여백에는 방향이 존재 (top, bottom, left, right)
+    - 클래스에 방향까지 지정 가능하도록 규격화 시켜 처리
+*/
+.mt-0 { margin-top: 0px; }
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mt-50 { margin-top: 50px; }
+
+.mb-0 { margin-bottom: 0px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+.mb-50 { margin-bottom: 50px; }
+
+.ms-0 { margin-left: 0px; }
+.ms-10 { margin-left: 10px; }
+.ms-20 { margin-left: 20px; }
+.ms-30 { margin-left: 30px; }
+.ms-40 { margin-left: 40px; }
+.ms-50 { margin-left: 50px; }
+
+.me-0 { margin-right: 0px; }
+.me-10 { margin-right: 10px; }
+.me-20 { margin-right: 20px; }
+.me-30 { margin-right: 30px; }
+.me-40 { margin-right: 40px; }
+.me-50 { margin-right: 50px; }
+
+/* 정렬 스타일 */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
