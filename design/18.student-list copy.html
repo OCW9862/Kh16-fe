@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 목록</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container w-800">
+        <div class="cell center">
+            <h1>학생 목록</h1>
+        </div>
+        <div class="cell right">
+            <a href="#" class="btn btn-neutral">신규 학생 등록</a>
+        </div>
+        <div class="cell">
+            등록된 학생 수 : 00명
+        </div>
+        <div class="cell center">
+            <form autocomplete="off">
+                <select name="column" class="field">
+                    <option value="student_name">학생명</option>
+                </select>
+                <input type="text" name="keyword" class="field"
+                        required placeholder="검색어 입력">
+                <button type="submit" class="btn btn-positive">검색</button>
+            </form>
+        </div>
+        <div class="cell mt-30">
+            <table class="table table-border table-hover table-striped w-100">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>이름</th>
+                        <th>국어</th>
+                        <th>영어</th>
+                        <th>수학</th>
+                        <th>총점</th>
+                        <th>평균</th>
+                        <th>등록일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>라이츄</td>
+                        <td>70</td>
+                        <td>80</td>
+                        <td>90</td>
+                        <td>240</td>
+                        <td>80.00</td>
+                        <td>2025년 8월 8일</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>홍길동</td>
+                        <td>50</td>
+                        <td>60</td>
+                        <td>70</td>
+                        <td>180</td>
+                        <td>60.00</td>
+                        <td>2025년 8월 8일</td>
+                    </tr>
+                    <tr>
+                        <td>41</td>
+                        <td>이오리</td>
+                        <td>70</td>
+                        <td>75</td>
+                        <td>85</td>
+                        <td>230</td>
+                        <td>76.67</td>
+                        <td>2025년 8월 19일</td>
+                    </tr>
+                    <tr>
+                        <td>42</td>
+                        <td>이소룡</td>
+                        <td>65</td>
+                        <td>75</td>
+                        <td>85</td>
+                        <td>220</td>
+                        <td>75.00</td>
+                        <td>2025년 8월 20일</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cell center mt-30">네비게이터</div>
+    </div>
+</body>
+</html>
