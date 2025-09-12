@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품권 등록</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container w-600">
+        <div class="cell center">
+            <h1>상품권 등록</h1>
+        </div>
+        <form autocomplete="off">
+        <div class="cell">
+            <label>상품권 이름 *</label>            
+            <input type="text" name="giftcardName" required class="field w-100">
+        </div>
+        <div class="cell">
+            <label>상품권 설명</label>
+            <textarea name="giftcardContent" rows="5" class="field w-100" required></textarea>
+        </div>
+        <div class="cell">
+            <label>상품권 판매가 *</label>
+            <input type="text" class="field w-100" name="giftcardPrice" required inputmode="numeric">
+        </div>
+        <div class="cell">
+            <label>충전 포인트 *</label>
+            <input type="text" class="field w-100" name="giftcardPoint" required inputmode="numeric">
+        </div>
+        <div class="cell">
+            <label>상품권 이미지 *</label>
+            <input type="file" name="attach" accept="image/*" class="field w-100" required>
+        </div>
+        <div class="cell mt-30">
+            <button class="btn btn-positive w-100">신규 등록</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

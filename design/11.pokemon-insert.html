@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포켓몬 등록</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container w-400">
+        <div class="cell">
+            <h1>포켓몬 등록</h1>
+        </div>
+        <form autocomplete="off">
+            <div class="cell">
+                <label>포켓몬 이름*</label>
+                <input type="text" name="pokemonName" placeholder="(ex) 피카츄" required class="field w-100">
+            </div>
+        <div class="cell">
+            <label>포켓몬 속성*</label>
+            <input type="text" name="pokemonType" placeholder="(ex)번개" required class="field w-100">
+        </div>
+        <div class="cell">
+            <label>포켓몬 이미지</label>
+            <input type="file" name="attach" accept=".png, .jpg" class="field w-100">
+        </div>    
+        <div class="cell mt-30">
+            <button class="btn btn-positive w-100">신규 등록</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

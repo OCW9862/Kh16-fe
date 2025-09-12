@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서 등록</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container w-600">
+        <div class="cell center">
+            <h1>도서 등록</h1>
+        </div>
+        <form autocomplete="off">
+        <div class="cell">
+            <label>도서 제목</label>
+            <input type="text" name="bookTitle" required class="field w-100">
+        </div> 
+        <div class="cell">
+            <lable>저자</lable>
+            <input type="text" name="bookAuthor" required class="field w-100">
+        </div>
+        <div class="cell">
+            <label>출간일</label>
+            <input type="date" name="bookPublicationDate" required class="field w-100">
+        </div>
+        <div class="cell">
+            <label>출판사</label>
+            <input type="text" name="bookPublisher" required class="field w-100">
+        </div>
+        <div class="cell">
+            <label>판매가</label>
+            <input type="text" name="bookPrice" required class="field w-100" inputmode="number">
+        </div>
+        <div class="cell">
+            <label>페이지 수</label>
+            <input type="text" name="bookPageCount" required class="field w-100" inputmode="number">
+        </div>
+        <div class="cell">
+            <label>장르</label>
+            <select name="bookGenre" required class="field w-100">
+                <option value="">선택하세요</option>
+                <option>추리/미스터리</option>
+                <option>과학소설</option>
+                <option>판타지</option>
+                <option>로맨스</option>
+                <option>스릴러/서스펜스</option>
+                <option>역사 소설</option>
+                <option>전기/평전</option>
+                <option>성장 소설</option>
+                <option>자기 계발</option>
+            </select>
+            </div>
+            <div class="cell mt-30">
+                <button class="btn btn-positive">신규 등록</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 등록</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container w-400">
+        <h1>학생 등록</h1>
+    </div>
+    <form autocomplete="off">
+        <div class="cell">
+            <label>학생 이름 *</label>
+            <input type="text" name="studentName" placeholder="(ex) 홍길동" required class="field w-100">
+        </div>
+        <div class="cell">
+            <label>국어 점수*</label>
+            <input type="text" name="studentKor" placeholder="0~100점 사이의 숫자" required class="field w-100" inputmode="numeric">
+        </div>
+        <div class="cell">
+            <label>영어 점수 *</label>
+            <input type="text" name="studentEng" placeholder="0~100점 사이의 숫자" required class="field w-100" inputmode="numeric">
+        </div>
+        <div class="cell">
+            <label>수학 점수 *</label>
+            <input type="text" name="studentMat" placeholder="0~100점 사이의 숫자" required class="field w-100" inputmode="numeric">
+        </div>
+        <div class="cell">
+            <button class="btn btn-positive w-100">신규 등록</button>
+        </div>
+    </form>
+</body>
+</html>

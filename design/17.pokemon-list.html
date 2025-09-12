@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포켓몬 목록</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <style>
+        /* 
+            테이블 디자인 
+            - 모든 태그에 클래스를 붙일 수 없기 때문에 탐색을 통해서 태그를 찾아야 한다
+            - 자식 선택자 (>) 를 이용하면 대상의 바로 아래 있는 태그를 찾을 수 있다
+            - 후손 선택자 (  ) 를 이용하면 대상의 내부에 있는 태그를 포괄적으로 찾을 수 있다
+            - 테이블이 중첩될 수 있기 때문에 다소 길더라도 자식 선택자를 사용하는 것을 권장
+        */
+        .table {
+            /* border: 1px solid #636e72; */
+            border-collapse: collapse;
+            font-size: 16px;
+            font-weight: 400 !important;
+        }
+        .table > thead > tr > th, 
+        .table > thead > tr > td,
+        .table > tbody > tr > th, 
+        .table > tbody > tr > td,
+        .table > tfoot > tr > th, 
+        .table > tfoot > tr > td {
+            /* border: 1px solid #636e72; */
+            font-size: inherit; /* 가장 가까운 외부영역의 규칙을 따라라! (지금은 table) */
+            font-weight: inherit; /* 가장 가까운 외부영역의 규칙을 따라라! (지금은 table) */
+            text-align: center;
+            padding: 0.25em;
+        }
+
+        /* 확장 스타일 1번 - 테두리가 있는 테이블 */
+        .table.table-border,
+        .table.table-border > thead > tr > th, 
+        .table.table-border > thead > tr > td,
+        .table.table-border > tbody > tr > th, 
+        .table.table-border > tbody > tr > td,
+        .table.table-border > tfoot > tr > th, 
+        .table.table-border > tfoot > tr > td
+        {
+            border: 1px solid #dfe6e9;
+        }
+
+        /* 확장 스타일 2번 - 마우스에 반응하는 테이블 */
+        .table.table-hover>tbody>tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        /*
+        확장 스타일 3번 줄무늬 테이블
+            -nth-child는 순서와 패턴을 지정할 때 사용
+            -n이라는 글자를 쓰면 n=1,2,3,4,5,...로 변하며 적용 
+        */
+        .table.table-striped>thead>tr {
+            background-color: #dfe6e9;
+        }
+        .table.table.table-striped>tbody>tr:nth-child(2n){
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container w-600">
+        <div class="cell center">
+            <h1>테이블 디자인</h1>
+        </div>
+        <div class="cell">
+            <table class="table table-border table-striped table-hover w-100">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>이름</th>
+                        <th>속성</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>이상해씨</td>
+                        <td>풀/독</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>파이리</td>
+                        <td>불꽃</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>꼬부기</td>
+                        <td>물</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>피카츄</td>
+                        <td>전기</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
