@@ -250,3 +250,25 @@ textarea.field {
 	border-radius: 100px; 
 	padding:0 0.25em; 
 }
+
+/* 
+    floatbox 디자인 
+    - float는 좌/우 원하는 곳에 손쉽게 배치하는 속성
+    - 일반 디자인과는 어울리기가 힘듦
+    - 독자적인 영역(float-box)을 만들어서 자동초기화
+    - 가상의 영역을 선택하여 실제 영역처럼 사용(가상선택자)
+        - ::before 는 시작 지점
+        - ::after 는 종료 지점
+        - 생성을 먼저 해야함 (content 속성)
+*/
+.float-box > .float-left {
+    float: left;
+}
+.float-box > .float-right {
+    float: right;
+}
+.float-box::after {
+    content: "";
+    display: block;
+    clear: both;
+}
