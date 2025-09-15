@@ -313,3 +313,25 @@ textarea.field {
     justify-content: center;
     align-items: center;
 }
+
+/* 기본 메뉴 디자인 */
+.menu {
+    background-color: #636e72;
+    display: flex;
+}
+.menu > .divider {
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu > a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    font-size: 24px;
+    padding: 0.5em;
+}
+.menu > a:hover {
+    background-color: #b2bec3;
+}
