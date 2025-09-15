@@ -220,3 +220,33 @@ textarea.field {
 .table.table-striped > tbody > tr:nth-child(2n) {
     background-color: #f2f2f2;
 }
+
+/* 페이지 네비게이터 디자인 */
+.pagination {
+    text-align: center;
+    font-size: 16px;
+}
+.pagination > a {
+    text-decoration: none;
+    color: #2d3436;
+    padding: 0.5em;
+    display: inline-block;
+    min-width: 2.5em;
+    /* border: 1px solid transparent; */
+}
+.pagination > a:hover, 
+.pagination > a.on
+{
+    /* border: 1px solid #2d3436; */
+    /* box-shadow: x y b s color; */
+    box-shadow: 0 0 2px 1px #2d3436;
+}
+
+/*
+	뱃지(Badge) 스타일
+*/
+.badge {
+	border: 1px solid #2d3436;
+	border-radius: 100px; 
+	padding:0 0.25em; 
+}
