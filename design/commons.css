@@ -281,3 +281,35 @@ textarea.field {
     display: block;
     clear: both;
 }
+
+/* Flexible 디자인 */
+.flex-box {
+    display: flex;
+    flex-direction: row;
+}
+.inline-flex-box {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+/* 세로형 배치를 원할 경우 */
+.flex-box.flex-vertical , 
+.inline-flex-box.flex-vertical
+{
+    flex-direction: column;
+}
+
+/* 플렉스 배치 내에서 나머지를 모두 차지 */
+.flex-box > .flex-fill ,
+.inline-flex-box > .flex-fill
+{
+    flex-grow: 1;
+}
+
+/* 크기가 충분할 경우 정가운데 배치 */
+.flex-box.flex-center ,
+.inline-flex-box.flex-center
+{
+    justify-content: center;
+    align-items: center;
+}
