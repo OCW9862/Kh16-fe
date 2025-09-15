@@ -13,6 +13,22 @@
         .link {
             text-decoration: none;
         }
+
+        .field.field-image {
+            padding-left: 3em;
+            /* background-image: url("./images/envelope.png"); */
+            background-size: 2em 1.5em;
+            background-repeat: no-repeat;
+            background-position: 0.5em center;
+        }
+        [name=memberId] {
+            background-image: url("./images/envelope.png");
+        }
+        [name=memberPw] {
+            background-image: url("./images/lock.png");
+            background-size: 1.5em 1.5em !important;
+            background-position: 0.75em center !important;
+        }
     </style>
 </head>
 <body>
@@ -21,11 +37,11 @@
             <img src="./images/coupang.png" width="250">
         </div>
         <div class="cell mt-30">
-            <input type="text" name="memberId" class="field w-100"
+            <input type="text" name="memberId" class="field field-image w-100"
                     placeholder="아이디(이메일)" required>
         </div>
         <div class="cell">
-            <input type="password" name="memberPw" class="field w-100"
+            <input type="password" name="memberPw" class="field field-image w-100"
                     placeholder="비밀번호" required>
         </div>
         <div class="cell">

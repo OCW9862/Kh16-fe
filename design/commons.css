@@ -111,6 +111,15 @@ textarea.field {
     resize: vertical;
 }
 
+/* 이미지가 포함된 입력창 배치 */
+.field.field-image {
+    padding-left: 3em;
+    /* background-image: url("./images/envelope.png"); */
+    background-size: 2em 1.5em;
+    background-repeat: no-repeat;
+    background-position: 0.5em center;
+}
+
 /*
     버튼 디자인
     - a태그와 button을 동일하게 디자인
