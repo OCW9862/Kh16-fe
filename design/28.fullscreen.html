@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체화면 가리기</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .fullscreen {
+            /* 
+                HTML의 기본 배치방식을 무시하고 내가 원하는 방식으로 위치를 지정 
+                - static : 연관배치, 위치조정 불가
+                - relative : 연관배치, 미세조정 가능
+                - absolute : 절대배치, 문서의 절대적인 위치에 배치
+                - fixed : 절대배치, 뷰포트(viewport)의 절대적인 위치에 배치
+                - relative, absolute, fixed는 위치를 직접 지정할 수 있다 
+                    - top : 상단에서 얼만큼 떨어져있는지를 표시
+                    - left : 좌측...
+                    - bottom : 하단...
+                    - right : 우측...
+            */
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container w-800">
+        <div class="cell center">
+            <h1>전체화면 가리기</h1>
+        </div>
+        
+        <div class="cell center">
+            <a href="https://www.google.com" class="btn btn-positive">
+                구글로 이동
+            </a>
+        </div>
+
+        <div class="fullscreen flex-box flex-center">
+            <!-- <div class="flex-box flex-vertical">
+                <i class="fa-solid fa-spinner fa-spin fa-5x"></i>
+                <span class="">Loading...</span>
+            </div> -->
+
+            <div class="container w-400" style="background-color: white; padding: 20px;">
+                <div class="cell center">
+                    <h1>로그인</h1>
+                </div>
+                <div class="cell">
+                    <label>아이디</label>
+                    <input type="text" name="memberId" class="field w-100">
+                </div>
+                <div class="cell">
+                    <label>비밀번호</label>
+                    <input type="password" name="memberPw" class="field w-100">
+                </div>
+                <div class="cell mt-30">
+                    <button type="submit" class="btn btn-positive w-100">로그인</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
