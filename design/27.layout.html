@@ -7,12 +7,25 @@
     <link rel="stylesheet" type="text/css" href="./commons.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <style>
-
+        .image-profile {
+            border-radius: 50%;
+            box-shadow: 0 0 3px 1px #636e72;
+            opacity: 0.95;
+            /* transition: opacity 0.1s ease-out; */
+            transition-property: opacity, box-shadow;
+            transition-duration: 0.1s;
+            transition-timing-function: ease-out;
+        }
+        .image-profile:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <!-- 고정된 컨테이너 생성 -->
     <div class="container w-1100 flex-box flex-vertical">
+
+        <!-- 헤더(Header) -->
         <div class="flex-box">
             <div class="w-25 flex-box flex-center">
                 <img src="https://dummyimage.com/200x50">
@@ -25,6 +38,8 @@
                 <p class="mt-0">1588-0000</p>
             </div>
         </div>
+        
+        <!-- 메뉴(Nav) -->
         <div>
             <div class="menu">
                 <a href="#">
@@ -51,7 +66,7 @@
                 <div class="divider"></div>
 
                 <a href="#">
-                    <i class="fa-solid fa-comments"></i>
+                    <i class="fa-solid ffa-right-to-bracket"></i>
                     <span>로그인</span>
                 </a>
                 <a href="#">
@@ -61,7 +76,54 @@
 
             </div>
         </div>
-        <div>content(section + aside)</div>
+
+        <!-- 컨텐츠 -->
+        <div class="flex-box" style="min-height: 400px;">
+
+            <!-- 사이드바(생략가능) -->
+            <div class="w-200">
+                <!-- 로그인 하지 않았을 때 -->
+                <div class="cell center">
+                    <h3>비회원 상태</h3>
+                </div>
+                <div class="cell center">
+                    <a href="#">
+                        <i class="fa-solid fa-right-to-bracket fa-fade"></i>
+                        <span>로그인</span>
+                    </a>
+                </div>
+                <div class="cell center">
+                    <a href="#">
+                        <i class="fa-solid fa-user-plus fa-fade"></i>
+                        <span>회원가입</span>
+                    </a>
+                </div>
+
+                <!-- 로그인 상태일 때 -->
+                <div class="cell center">
+                    <!-- <img src="https://dummyimage.com/150x150" width="150" height="150"> -->
+                    <img src="https://picsum.photos/200" width="150" height="150"
+                                class="image-profile">
+                </div>
+                <div class="cell center">
+                    <h3>아이디(등급)</h3>
+                </div>
+                <div class="cell center">보유포인트 : 000 point</div>
+                <div class="cell center">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <span>내 정보 보기</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 섹션 -->
+            <div class="flex-fill">섹션</div>
+
+            <!-- 사이드바(생략가능) -->
+            <!-- <div class="w-200">우측</div> -->
+
+        </div>
         <div>footer</div>
     </div>
 </body>
