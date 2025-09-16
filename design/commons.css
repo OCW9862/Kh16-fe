@@ -316,7 +316,7 @@ textarea.field {
 
 /* 기본 메뉴 디자인 */
 .menu {
-    background-color: #636e72;
+    background-color: #FFFFFF;
     display: flex;
 }
 .menu > .divider {
@@ -325,7 +325,7 @@ textarea.field {
 }
 .menu > a {
     text-decoration: none;
-    color: white;
+    color: #333333;
     display: inline-block;
     width: 100px;
     text-align: center;
@@ -333,5 +333,7 @@ textarea.field {
     padding: 0.5em;
 }
 .menu > a:hover {
-    background-color: #b2bec3;
+    background-color: #F8F9FA;
+    font-weight: bold;
+    color: #111111;
 }
