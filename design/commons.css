@@ -327,21 +327,30 @@ textarea.field {
     text-decoration: none;
     color: #333333;
     display: inline-block;
-    width: 100px;
+    width: 130px;
     text-align: center;
     font-size: 20px;
     padding: 0.5em;
 
-    /*
-        혹시라도 넘어가면 말줄임표 처리
-        - 반드시 세가지 속성이 모두 존재해야함
-        - 폭(width), 넘침(overflow), 글자 넘침(text-overflow)
+    /* 
+        혹시라도 넘어가면 말줄임표 처리 
+        - 반드시 네 가지 속성이 모두 존재해야함
+        - 폭(width), 넘침(overflow), 글자 넘침(text-overflow), 줄바꿈(white-space)
     */
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .menu > a:hover {
     background-color: #F8F9FA;
     font-weight: bold;
     color: #111111;
+}
+
+/* 말줄임표 설정 클래스 */
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
