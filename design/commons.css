@@ -165,15 +165,15 @@ textarea.field {
 /*
     글자 색상 클래스
 */
-.red { color: #d63031; }
-.orange { color: #e17055; }
-.yellow { color: #fdcb6e; }
-.green { color: #00b894; }
-.blue { color: #0984e3; }
-.purple { color: #6c5ce7; }
-.black { color: #2d3436; }
-.gray { color: #636e72; }
-.white { color: white; }
+.red { color: #d63031 !important; }
+.orange { color: #e17055 !important; }
+.yellow { color: #fdcb6e !important; }
+.green { color: #00b894 !important; }
+.blue { color: #0984e3 !important; }
+.purple { color: #6c5ce7 !important; }
+.black { color: #2d3436 !important; }
+.gray { color: #636e72 !important; }
+.white { color: white !important; }
 
 /* 
     테이블 디자인 
