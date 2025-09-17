@@ -354,3 +354,24 @@ textarea.field {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* 
+HTML의 기본 배치방식을 무시하고 내가 원하는 방식으로 위치를 지정 
+- static : 연관배치, 위치조정 불가
+- relative : 연관배치, 미세조정 가능
+- absolute : 절대배치, 문서의 절대적인 위치에 배치
+- fixed : 절대배치, 뷰포트(viewport)의 절대적인 위치에 배치
+- relative, absolute, fixed는 위치를 직접 지정할 수 있다 
+- top : 상단에서 얼만큼 떨어져있는지를 표시
+- left : 좌측...
+- bottom : 하단...
+- right : 우측...
+*/
+.fullscreen {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
