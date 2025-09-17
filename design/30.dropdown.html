@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        /* 
+            후방선택자(+, ~)를 이용해서 특정 대상의 뒤에 있는 태그들을 선택할 수 있다 
+            +를 사용하면 바로 뒤 1개를 선택
+            ~을 사용하면 뒤에 있는 전체를 선택
+        */
+        .btn-dropdown + div {
+            display: none;
+        }
+        .btn-dropdown:hover + div {
+            display: block;
+        }
+
+        .dropdown {
+            /* absolute의 기준 영역을 설정*/
+            position: relative;
+        }
+        .dropdown > .collapse {
+            display: none;
+            position: absolute;
+            top:100%;
+            left: 0;
+            background-color: white;
+        }
+        .dropdown > .collapse > div {
+            padding: 0.5em 1em;
+        }
+        .dropdown:hover > .collapse {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container w-800">
+        <div class="cell center">
+            <h1>드롭다운</h1>
+        </div>
+        
+        <div class="cell">
+            <button type="button" class="btn btn-positive btn-dropdown">선택</button>
+            <div><!-- 버튼 뒤(+)에 있는 div -->
+                <div>사과</div>
+                <div>딸기</div>
+                <div>바나나</div>
+                <div>포도</div>
+            </div>
+        </div>
+
+        <div class="cell">
+            추가될 내용들
+        </div>
+
+        <div class="cell" style="padding-left: 100px;">
+
+            <div class="dropdown">
+                <button type="button" class="btn btn-positive">선택</button>
+                <div class="collapse"><!-- 드롭다운 안(>)에 있는 div -->
+                    <div>사과</div>
+                    <div>딸기</div>
+                    <div>바나나</div>
+                    <div>포도</div>
+                </div>
+            </div>
+
+            <div class="cell">
+                추가될 내용들
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
