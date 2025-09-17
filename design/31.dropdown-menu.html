@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        /* 
+            드롭다운 메뉴 만들기 
+            (1) 모든 .collapse를 숨김 처리
+            (2) 기본 메뉴를 한 줄로 변경(flex)
+            (3) 모든메뉴(.dropdown)에 마우스가 올라가면 그 하위메뉴(.collapse)를 표시
+            (4) 모든 하위메뉴(.collapse)를 absolute 처리 (+가둘 수 있도록 설정)
+        */
+
+        /* (1) */
+        .dropdown-menu .collapse {
+            display: none;
+        }
+        /* (2) */
+        .dropdown-menu {
+            display: flex;
+        }
+        /* (3) */
+        .dropdown-menu .dropdown:hover > .collapse {
+            display: block;
+        }
+        /* (4) */
+        .dropdown-menu .dropdown {
+            position: relative;
+        }
+        .dropdown-menu .collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container w-1100">
+        <div class="cell center">
+            <h1>드롭다운 메뉴</h1>
+        </div>
+        
+        <div class="cell">
+            <div class="dropdown-menu">
+                <div class="dropdown">
+                    <a href="#">제목</a>
+                    <div class="collapse">
+                        하위메뉴들...
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">제목</a>
+                    <div class="collapse">
+                        메뉴들...
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">제목</a>
+                    <div class="collapse">
+                        메뉴들...
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">제목</a>
+                    <div class="collapse">
+                        메뉴들...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
