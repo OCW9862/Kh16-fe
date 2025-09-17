@@ -9,6 +9,7 @@
     <style>
         /* 
             드롭다운 메뉴 만들기 
+            (+추가) ul과 li의 기본 스타일을 제거
             (1) 모든 .collapse를 숨김 처리
             (2) 기본 메뉴를 한 줄로 변경(flex)
             (3) 모든메뉴(.dropdown)에 마우스가 올라가면 그 하위메뉴(.collapse)를 표시
@@ -20,9 +21,17 @@
             (7) .divider를 이용해서 메뉴를 좌우로 분리
             (8) .divider 뒤에 있는 메뉴들을 우측메뉴라 생각하고 하위요소를 좌측으로 표시
         */
+        .dropdown-menu, 
+        .dropdown-menu ul,
+        .dropdown-menu li
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
         /* (1) */
-        .dropdown-menu .collapse {
+        .dropdown-menu ul {
             display: none;
         }
         /* (2) */
@@ -30,25 +39,25 @@
             display: flex;
         }
         /* (3) */
-        .dropdown-menu .dropdown:hover > .collapse {
+        .dropdown-menu li:hover > ul {
             display: block;
         }
         /* (4) */
-        .dropdown-menu .dropdown {
+        .dropdown-menu li {
             position: relative;
         }
-        .dropdown-menu .collapse {
+        .dropdown-menu ul {
             position: absolute;
             top: 100%;
             left: 0;
         }
         /* (5) */
-        .dropdown-menu .dropdown {
+        .dropdown-menu li {
             width: 130px;
         }
         .dropdown-menu a {
             text-decoration: none;
-            color: black;
+            color: white;
             display: block;
             width: 100%;
             padding: 0.25em 0.5em;
@@ -56,27 +65,33 @@
         }
         .dropdown-menu a:hover {
             font-weight: bold;
-            background-color: #EEEEEE;
+            background-color: #636e72;
         }
-        .dropdown-menu .collapse {
+        .dropdown-menu ul {
             width: 100%;
         }
-        /* (6) 2차 이상의 메뉴에 있는 collapse */ 
-        /* .dropdown-menu > .dropdown > .collapse .collapse, */
-        .dropdown-menu > .dropdown .dropdown > .collapse {
+        /* (6) 2차 이상의 메뉴에 있는 */ 
+        /* .dropdown-menu > li > ul ul, */
+        .dropdown-menu > li li > ul {
             top:0;
             left:100%;
         }
-        /* (7) */
+        /* (7) div 대신 li로 divider를 만들어서 적용 */
         .dropdown-menu > .divider {
             margin-left: auto;
             margin-right: auto;
         }
         /* (8) */
-        .dropdown-menu > .divider ~ .dropdown .dropdown > .collapse {
+        .dropdown-menu > .divider ~ li li > ul {
             top: 0;
             left: auto;
             right: 100%;
+        }
+        /* 배경색 설정 */
+        .dropdown-menu,
+        .dropdown-menu ul
+        {
+            background-color: #2d3436;
         }
     </style>
 </head>
@@ -87,135 +102,29 @@
         </div>
         
         <div class="cell">
-            <div class="dropdown-menu">
-
-                <!-- 1차 -->
-                <div class="dropdown">
-                    <a href="#">제목</a>
-                    <div class="collapse">
-                        <!-- 2차 -->
-                        <div class="dropdown">
-                            <a href="#">제목</a>
-                            <!-- <div class="collapse">
-                                하위메뉴들...
-                            </div> -->
-                        </div>
-                        <div class="dropdown">
-                            <a href="#">제목</a>
-                            <div class="collapse">
-                                <!-- 3차 메뉴 -->
-                                <div class="dropdown">
-                                    <a href="#">제목</a>
-                                    <!-- <div class="collapse">
-                                        하위메뉴들...
-                                    </div> -->
-                                </div>
-                                <div class="dropdown">
-                                    <a href="#">제목</a>
-                                    <!-- <div class="collapse">
-                                        하위메뉴들...
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 2차 -->
-                        <div class="dropdown">
-                            <a href="#">제목</a>
-                            <div class="collapse">
-                                <!-- 3차 -->
-                                <div class="dropdown">
-                                    <a href="#">제목</a>
-                                    <!-- <div class="collapse">
-                                        하위메뉴들...
-                                    </div> -->
-                                </div>
-                                <div class="dropdown">
-                                    <a href="#">제목</a>
-                                    <!-- <div class="collapse">
-                                        하위메뉴들...
-                                    </div> -->
-                                </div>
-                                <div class="dropdown">
-                                    <a href="#">제목</a>
-                                    <!-- <div class="collapse">
-                                        하위메뉴들...
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="#">제목</a>
-                            <!-- <div class="collapse">
-                                하위메뉴들...
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <!-- 1차 -->
-                <div class="dropdown">
-                    <a href="#">제목</a>
-                    <!-- <div class="collapse">
-                        메뉴들...
-                    </div> -->
-                </div>
-                
-                <div class="divider"></div>
-
-                <!-- 1차 -->
-                <div class="dropdown">
-                    <a href="#">제목</a>
-                    <!-- <div class="collapse">
-                        메뉴들...
-                    </div> -->
-                </div>
-                <!-- 1차 -->
-                <div class="dropdown">
-                    <a href="#">제목</a>
-                    <div class="collapse">
-                        <!-- 2차 -->
-                        <div class="dropdown">
-                            <a href="#">제목</a>
-                            <div class="collapse">
-                                <!-- 3차-->
-                                <div class="dropdown">
-                                    <a href="#">제목</a>
-                                    <!-- <div class="collapse">
-                                        메뉴들...
-                                    </div> -->
-                                </div>
-                                <!-- 3차-->
-                                <div class="dropdown">
-                                    <a href="#">제목</a>
-                                    <!-- <div class="collapse">
-                                        메뉴들...
-                                    </div> -->
-                                </div>
-                                <!-- 3차-->
-                                <div class="dropdown">
-                                    <a href="#">제목</a>
-                                    <!-- <div class="collapse">
-                                        메뉴들...
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 2차 -->
-                        <div class="dropdown">
-                            <a href="#">제목</a>
-                            <!-- <div class="collapse">
-                                메뉴들...
-                            </div> -->
-                        </div>
-                        <!-- 2차 -->
-                        <div class="dropdown">
-                            <a href="#">제목</a>
-                            <!-- <div class="collapse">
-                                메뉴들...
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">1차메뉴</a>
+                    <ul>
+                        <li><a href="#">2차메뉴</a></li>
+                        <li>
+                            <a href="#">2차메뉴</a>
+                            <ul>
+                                <li><a href="#">3차메뉴</a></li>
+                                <li><a href="#">3차메뉴</a></li>
+                                <li><a href="#">3차메뉴</a></li>
+                                <li><a href="#">3차메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">2차메뉴</a></li>
+                        <li><a href="#">2차메뉴</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">1차메뉴</a></li>
+                <li class="divider"></li>
+                <li><a href="#">1차메뉴</a></li>
+                <li><a href="#">1차메뉴</a></li>
+            </ul>
         </div>
     </div>
 </body>
