@@ -30,6 +30,9 @@
         }
 
         /* 사이드바 디자인 */
+        #toggle {
+            display: none;
+        }
         #toggle + .sidebar {
             background-color: yellow;
             position: fixed;
@@ -39,7 +42,7 @@
             z-index: 999;
             width: 200px;
             overflow: hidden;
-            transition-property: width;
+            transition-property: transform;
             transition-duration: 0.2s;
             transition-timing-function: ease-out;
         }
@@ -48,6 +51,38 @@
             /* left: -200px; */
             /* margin-left: -200px; */
             transform: translate(-100%, 0);
+        }
+        #toggle ~ .toggle-label {
+            font-size: 24px;
+            width: 2em;
+            height: 2em;
+            border: 2px solid #2d3436;
+            border-radius: 0.2em;
+            color: #2d3436;
+            background-color: white;
+            cursor: pointer;
+
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            
+            position: fixed;
+            top: 1em;
+            left: 1em;
+            z-index: 1000;
+        }
+        #toggle ~ .toggle-label > i {
+            transition: transform 0.2s linear;
+            transform: rotate(0deg);
+        }
+        #toggle ~ .toggle-label:hover {
+            border-color: black;
+            color: black;
+        }
+        /* #toggle:checked ~ .toggle-label  */
+        #toggle:checked ~ .toggle-label > i
+        {
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -72,11 +107,13 @@
         </div>
 
         <div class="cell">
-            <input type="checkbox" id="toggle">
+            <input type="checkbox" id="toggle" checked>
             <div class="sidebar">
                 사이드바
             </div>
-            <label for="toggle">메뉴</label>
+            <label for="toggle" class="toggle-label">
+                <i class="fa-solid fa-arrow-left"></i>
+            </label>
         </div>
     </div>
 </body>
