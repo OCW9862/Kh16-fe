@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스 디자인</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        /* 일반 상태(체크 안된 상태) */
+        .ck1 + span {
+
+        }
+        /* 체크된 상태 */
+        .ck1:checked + span {
+            color: red;
+        }
+
+
+        /* 아이디는 해시(#)를 이용하여 선택한다 */
+        #hide {
+            display: none;
+        }
+        #hide + label::after {
+            content: "안녕하세요?";
+        }
+        #hide:checked + label::after {
+            /* color: red; */
+            content: "Hello?";
+        }
+
+        /* 사이드바 디자인 */
+        #toggle + .sidebar {
+            background-color: yellow;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 999;
+            width: 200px;
+            overflow: hidden;
+            transition-property: width;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+        }
+        #toggle:checked + .sidebar {
+            /* width: 0px; */
+            /* left: -200px; */
+            /* margin-left: -200px; */
+            transform: translate(-100%, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container w-800">
+        <div class="cell center">
+            <h1>체크박스 디자인</h1>
+        </div>
+        
+        <div class="cell">
+            <input type="checkbox" class="ck1">
+            <span>더미텍스트</span>
+        </div>
+
+        <div class="cell">
+            <input type="checkbox" id="hide">
+            <label for="hide"></label>
+        </div>
+
+        <div class="cell center">
+            <h1>사이드바 만들기</h1>
+        </div>
+
+        <div class="cell">
+            <input type="checkbox" id="toggle">
+            <div class="sidebar">
+                사이드바
+            </div>
+            <label for="toggle">메뉴</label>
+        </div>
+    </div>
+</body>
+</html>
