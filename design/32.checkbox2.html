@@ -30,9 +30,6 @@
         }
 
         /* 사이드바 디자인 */
-        #toggle {
-            display: none;
-        }
         #toggle + .sidebar {
             background-color: yellow;
             position: fixed;
@@ -42,7 +39,7 @@
             z-index: 999;
             width: 200px;
             overflow: hidden;
-            transition-property: transform;
+            transition-property: width;
             transition-duration: 0.2s;
             transition-timing-function: ease-out;
         }
@@ -51,42 +48,6 @@
             /* left: -200px; */
             /* margin-left: -200px; */
             transform: translate(-100%, 0);
-        }
-        #toggle ~ .toggle-label {
-            font-size: 24px;
-            width: 2em;
-            height: 2em;
-            border: 2px solid #2d3436;
-            border-radius: 0.2em;
-            color: #2d3436;
-            background-color: white;
-            cursor: pointer;
-
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            
-            position: fixed;
-            top: 1em;
-            left: 1em;
-            z-index: 1000;
-        }
-        #toggle ~ .toggle-label:hover {
-            border-color: black;
-            color: black;
-        }
-        #toggle:checked ~ .toggle-label {
-
-        }
-        #toggle ~ .toggle-label > .fa-bars,
-        #toggle:checked ~ .toggle-label > .fa-xmark
-        {
-            display: none;
-        }
-        #toggle ~ .toggle-label > .fa-xmark ,
-        #toggle:checked ~ .toggle-label > .fa-bars
-        {
-            display: block;
         }
     </style>
 </head>
@@ -111,14 +72,11 @@
         </div>
 
         <div class="cell">
-            <input type="checkbox" id="toggle" checked>
+            <input type="checkbox" id="toggle">
             <div class="sidebar">
                 사이드바
             </div>
-            <label for="toggle" class="toggle-label">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-xmark"></i>
-            </label>
+            <label for="toggle">메뉴</label>
         </div>
     </div>
 </body>
