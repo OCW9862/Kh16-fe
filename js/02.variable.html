@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초 문법</title>
+    <script>
+        //자바는 컴파일언어(녹화방송) , 자바스크립트는 스크립트언어(생방송)
+        //- 컴파일언어(녹화방송)의 목표는 최대한 사전에 효율적으로 처리하도록 준비 (엄격한 검사)
+        //- 스크립트언어(생방송)의 목표는 최대한 끊김없이 자연스럽게 진행되도록 처리 (유연한 검사)
+
+        //기본 출력 명령
+        //System.out.println("Hello world!");
+        console.log("Hello world!");
+        console.log("Hello world!")
+        console.log('Hello world!')
+        console.log("hello" * 100);
+
+        //변수 생성
+        //int a = 10;
+        var a = 10;
+        console.log("a = " + a);
+        //double b = 3.14;
+        var b = 3.14;
+        console.log("b = " + b);
+        //String c = "hello";
+        var c = "hello";
+        console.log("c = " + c);
+        var d;
+        console.log("d = " + d);//자바에서 실행이 안되는 코드(자바스크립트에선 가능)
+        
+        //console.log("e = " + e);//자바스크립트에서도 용서가 안되는 코드(더이상 진행 불가)
+
+        var f = -10 / 0;//자바에서 안되는 코드
+        console.log("f = " + f);
+
+        var g = null;//자바에도 있는 값
+        console.log(g);
+
+        var h = 10 < 20;
+        console.log(h);
+
+        //자바 입장에서 보면 어이가 없는 코드들
+        console.log(0 == false);
+        console.log(undefined == null);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
