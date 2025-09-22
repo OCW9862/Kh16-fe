@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 바꾸기</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .wrapper .fa-up-down, 
+        .wrapper.flex-vertical .fa-left-right
+        {
+            display: none;
+        }
+        .wrapper .fa-left-right,
+        .wrapper.flex-vertical .fa-up-down
+        {
+            display: block;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function changeText() {
+            var target1 = document.querySelector(".target1");
+            var target2 = document.querySelector(".target2");
+            
+            var backup = target1.value;
+            target1.value = target2.value;
+            target2.value = backup;
+        }
+    </script>
+</head>
+<body>
+    <div class="container w-800">
+        <div class="cell center">
+            <h1>자리 바꾸기</h1>
+        </div>
+        
+        <div class="cell">
+            <div class="flex-box flex-vertical wrapper">
+                <textarea class="field w-100 target1" rows="6" style="resize: none;"></textarea>
+                <div class="flex-box flex-center ms-10 me-10 mt-10 mb-10">
+                    <button class="btn btn-positive" onclick="changeText();">
+                        <i class="fa-solid fa-left-right"></i>
+                        <i class="fa-solid fa-up-down"></i>
+                    </button>
+                </div>
+                <textarea class="field w-100 target2" rows="6" style="resize: none;"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
