@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기 소개서</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        
+    </style>
+
+    <script type="text/javascript">
+        function calculateLength() {
+            //자바스크립트는 태그를 제어하기 위해 태그의 속성별 데이터를 따로 정리해서 가지고 있다
+            //(중요) 편의를 위해 입력창(input,select,textarea)는 value가 있든 없든 value로 읽을 수 있다
+            var textarea =  document.querySelector(".target");
+            var count = textarea.value.length;
+            
+            var div = textarea.nextElementSibling;
+            div.textContent = count+" / 1000";
+
+            if(count > 1000) {//1000글자가 넘어갔다면
+                div.style.color = "red";
+            }
+            else {
+                div.style.color = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container w-800">
+        <div class="cell center">
+            <h1>자기 소개서</h1>
+        </div>
+        
+        <div class="cell">
+            <h2>(Q) 본인 성격의 장/단점을 기술하세요</h2>
+        </div>
+        <div class="cell">
+            <textarea class="field w-100 target" rows="10" oninput="calculateLength();"></textarea>
+            <div class="right">0 / 1000</div>
+        </div>
+
+    </div>
+</body>
+</html>
