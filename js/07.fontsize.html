@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 크기 제어</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .target {
+            /* transition: font-size 0.1s ease-out; */
+            transition-property: font-size;
+            transition-duration: 0.1s;
+            transition-timing-function: ease-out;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function changeToSmall() {
+            var target = document.querySelector(".target");
+            //target.style = "font-size:12px";//비추천
+            //target.style.font-size = "12px";//오류
+            //target.style["font-size"] = "12px";//자바 스타일이 아님
+            target.style.fontsize = "12px";//자바 스타일(대시 대신 카멜케이스)
+        }
+            function changeToMedium () {
+            var target = document.querySelector(".target");
+            target.style.fontSize = "16px";
+        }
+        function changeToLarge() {
+            var target = document.querySelector(".target");
+            target.style.fontSize = "24px";
+        }
+    </script>
+</head>
+<body>
+        <div class="container w-800">
+        <div class="cell center">
+            <h1>글자 크기 제어</h1>
+        </div>
+        
+        <div class="cell center">
+            <button type="button" class="btn btn-neutral" onclick="changeToSmall();">작게</button>
+            <button type="button" class="btn btn-neutral" onclick="changeToMedium();">보통</button>
+            <button type="button" class="btn btn-neutral" onclick="changeToLarge();">크게</button>
+        </div>
+
+        <div class="cell">
+            <div class="target" style="font-size: 16px;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula in metus a gravida. Aliquam dapibus nibh vel massa vulputate, sit amet eleifend nibh luctus. Vivamus vel tempor urna. Maecenas bibendum hendrerit hendrerit. Ut rhoncus nisl dolor, a tempus quam porta nec. Ut sed sem sed nisl finibus scelerisque ut in nunc. Pellentesque auctor risus non vestibulum venenatis. Curabitur at velit lorem. Nulla interdum odio non orci tincidunt auctor.</p>
+                <p>Pellentesque a orci facilisis, pretium odio eget, luctus arcu. Cras magna sapien, auctor nec pulvinar ac, hendrerit a lacus. Pellentesque gravida in nisi ut ultrices. Morbi non euismod libero, vitae viverra diam. Phasellus finibus pretium purus, sit amet auctor tellus gravida id. Nullam vel viverra risus. Maecenas vel volutpat ipsum. Maecenas vel orci nulla. Sed justo massa, aliquam sit amet mi sed, blandit semper ligula. Nulla sollicitudin ultrices sodales. Etiam ut tincidunt neque. Cras odio orci, viverra ac cursus ut, auctor id tortor. Fusce id sem sagittis, dapibus purus eu, sodales dolor. Sed orci nisl, pharetra ac consequat vel, consectetur sed eros. Cras eget sodales turpis.</p>
+                <p>Donec consectetur fringilla quam. Nunc lectus turpis, luctus nec nibh sit amet, aliquet vestibulum ligula. Etiam in euismod nunc. Praesent est lectus, blandit ut varius quis, imperdiet ac libero. Vivamus id dignissim nisi, vitae faucibus metus. Phasellus iaculis lorem in lorem lacinia, eget euismod sem scelerisque. Curabitur sit amet nunc gravida, aliquet est in, placerat ante. Fusce ut congue nunc. Duis porttitor pulvinar mi non lacinia. Praesent scelerisque, augue sed suscipit euismod, mi elit ultrices purus, nec scelerisque metus purus et dui. Ut faucibus neque eu interdum consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam at nisl imperdiet, facilisis erat vel, sagittis libero. Ut suscipit pharetra tincidunt. Donec commodo ex non convallis porttitor.</p>
+                <p>Curabitur nec metus bibendum, auctor sapien quis, feugiat lectus. In nulla massa, mollis quis ultricies vitae, molestie in magna. Phasellus quis augue nec nibh pretium malesuada. Vivamus nec scelerisque enim. Ut sed bibendum nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque scelerisque purus sit amet massa facilisis, sit amet placerat diam pellentesque. Fusce non gravida augue. Curabitur ultricies et sapien in mollis. Etiam ipsum diam, pulvinar ac posuere a, feugiat et neque. Ut pharetra nisl in tortor egestas gravida vel id velit. Proin nec eleifend enim, at finibus magna. Cras massa odio, sodales eget fringilla nec, fermentum sed risus.</p>
+                <p>Mauris at mollis urna. Sed et mauris felis. Fusce in dapibus justo. Ut porta nunc id velit gravida congue. Donec tempus vehicula nisl eu ultricies. Sed mi nunc, molestie non efficitur sit amet, mattis at lorem. Integer fermentum dignissim velit sit amet tincidunt. Nunc a mauris et enim laoreet laoreet porta nec sem.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
