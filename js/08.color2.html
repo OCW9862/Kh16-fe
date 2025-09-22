@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 색상 제어</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .target {
+            transition: color 0.1s ease-out;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function changeColor(colorText) {
+            var target = document.querySelector(".target");
+            target.style.color = colorText;
+        }
+    </script>
+</head>
+<body>
+    <div class="container w-800">
+        <div class="cell center">
+            <h1>글자 색상 제어</h1>
+        </div>
+        
+        <div class="cell center">
+            <button type="button" class="btn btn-neutral" onclick="changeColor('red');">빨강</button>
+            <button type="button" class="btn btn-neutral" onclick="changeColor('orange')">주황</button>
+            <button type="button" class="btn btn-neutral" onclick="changeColor('yellow')">노랑</button>
+            <button type="button" class="btn btn-neutral" onclick="changeColor('green');">초록</button>
+            <button type="button" class="btn btn-neutral" onclick="changeColor('blue');">파랑</button>
+            <button type="button" class="btn btn-neutral" onclick="changeColor('darkblue')">남색</button>
+            <button type="button" class="btn btn-neutral" onclick="changeColor('purple')">보라</button>
+        </div>
+
+        <div class="cell center">
+            <h1 class="target">Hello Javascript!</h1>
+        </div>
+    </div>
+</body>
+</html>
