@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴대전화 키패드</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        
+    </style>
+
+    <script type="text/javascript">
+        function clickNumber(number) {
+            var target = document.querySelector(".target");
+            target.value += number;
+        }
+        function clickClear() {
+            var target = document.querySelector(".target");
+            target.value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container w-400">
+        <div class="cell center">
+            <h1>휴대전화 키패드</h1>
+        </div>
+        
+        <div class="cell">
+            <input type="text" class="field w-100 target" autocomplete="off"
+                    placeholder="번호 입력">
+        </div>
+
+        <div class="cell">
+            <div class="flex-box">
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber('7');">7</button>
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber('8');">8</button>
+                <button type="button" class="btn btn-positive w-100" onclick="clickNumber('9');">9</button>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="flex-box">
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber('4');">4</button>
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber('5');">5</button>
+                <button type="button" class="btn btn-positive w-100" onclick="clickNumber('6');">6</button>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="flex-box">
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber('1');">1</button>
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber('2');">2</button>
+                <button type="button" class="btn btn-positive w-100" onclick="clickNumber('3');">3</button>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="flex-box">
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber('*');">*</button>
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber('0');">0</button>
+                <button type="button" class="btn btn-positive w-100" onclick="clickNumber('#');">#</button>
+            </div>
+        </div>
+        <div class="cell">
+            <button type="button" class="btn btn-negative w-100" onclick="clickClear();">clear</button>
+        </div>
+    </div>
+</body>
+</html>

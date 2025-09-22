@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴대전화 키패드</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        
+    </style>
+
+    <script type="text/javascript">
+        function clickNumber1() {
+            var target = document.querySelector(".target");
+            target.value += "1";
+        }
+        function clickNumber2() {
+            var target = document.querySelector(".target");
+            target.value += "2";
+        }
+        function clickNumber3() {
+            var target = document.querySelector(".target");
+            target.value += "3";
+        }
+        function clickNumber4() {
+            var target = document.querySelector(".target");
+            target.value += "4";
+        }
+        function clickNumber5() {
+            var target = document.querySelector(".target");
+            target.value += "5";
+        }
+        function clickNumber6() {
+            var target = document.querySelector(".target");
+            target.value += "6";
+        }
+        function clickNumber7() {
+            var target = document.querySelector(".target");
+            target.value += "7";
+        }
+        function clickNumber8() {
+            var target = document.querySelector(".target");
+            target.value += "8";
+        }
+        function clickNumber9() {
+            var target = document.querySelector(".target");
+            target.value += "9";
+        }
+        function clickNumberStar() {
+            var target = document.querySelector(".target");
+            target.value += "*";
+        }
+        function clickNumber0() {
+            var target = document.querySelector(".target");
+            target.value += "0";
+        }
+        function clickNumberHash() {
+            var target = document.querySelector(".target");
+            target.value += "#";
+        }
+        function clickClear() {
+            var target = document.querySelector(".target");
+            target.value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container w-400">
+        <div class="cell center">
+            <h1>휴대전화 키패드</h1>
+        </div>
+        
+        <div class="cell">
+            <input type="text" class="field w-100 target" autocomplete="off"
+                    placeholder="번호 입력">
+        </div>
+
+        <div class="cell">
+            <div class="flex-box">
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber7();">7</button>
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber8();">8</button>
+                <button type="button" class="btn btn-positive w-100" onclick="clickNumber9();">9</button>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="flex-box">
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber4();">4</button>
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber5();">5</button>
+                <button type="button" class="btn btn-positive w-100" onclick="clickNumber6();">6</button>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="flex-box">
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber1();">1</button>
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber2();">2</button>
+                <button type="button" class="btn btn-positive w-100" onclick="clickNumber3();">3</button>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="flex-box">
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumberStar();">*</button>
+                <button type="button" class="btn btn-positive w-100 me-10" onclick="clickNumber0();">0</button>
+                <button type="button" class="btn btn-positive w-100" onclick="clickNumberHash();">#</button>
+            </div>
+        </div>
+        <div class="cell">
+            <button type="button" class="btn btn-negative w-100" onclick="clickClear();">clear</button>
+        </div>
+    </div>
+</body>
+</html>
