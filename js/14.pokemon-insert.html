@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포켓몬 등록</title>
+    <link rel="stylesheet" type="text/css" href="./commons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .feedback.success {
+            color: #0984e3;
+        }
+        .feedback.fail {
+            color: #d63031;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function checkPokemonName() {
+            //pokemonName 입력창의 입력값을 가져와 형식 검사 후 결과를 바로 뒤 .feedback에 출력
+            var input = document.querySelector("[name=pokemonName]");
+            var regex = /^[가-힣]{1,10}$/;
+            var valid = regex.test(input.value);
+            
+            var feedback = input.nextElementSibling;
+            feedback.classList.remove("success", "fail");//여기는 점(.)을 안찍습니다 (클래스 전용 명령)
+            feedback.classList.add(valid ? "success" : "fail");//여기는 점(.)을 안찍습니다 (클래스 전용 명령)
+            if(valid) {
+                input.style.borderColor = "#0984e3";
+                feedback.textContent = "올바른 형식의 이름입니다!";
+            }
+            else {
+                input.style.borderColor = "#d63031";
+                feedback.textContent = "한글 10글자 이내로만 작성이 가능합니다";
+            }
+        }
+        function checkPokemonType() {
+            //pokemonType 입력창의 입력값을 가져와 형식 검사 후 결과를 바로 뒤 .feedback에 출력
+            var input = document.querySelector("[name=pokemonType]");
+            var regex = /^[가-힣,]{1,10}$/;
+            var valid = regex.test(input.value);
+
+            var feedback = input.nextElementSibling;
+            feedback.classList.remove("success", "fail");
+            feedback.classList.add(valid ? "success" : "fail");
+            feedback.textContent = valid ? "올바른 속성이 입력되었습니다" : "한글 10글자 이내만 가능해요!";
+            input.style.borderColor = valid ? "#0984e3" : "#d63031";
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post" autocomplete="off">
+    <div class="container w-500">
+        <div class="cell center">
+            <h1>포켓몬 등록</h1>
+        </div>
+        
+        <div class="cell">
+            <label>포켓몬 이름 <i class="fa-solid fa-asterisk red"></i></label>
+            <input type="text" name="pokemonName" placeholder="한글 10글자 이내" 
+                    class="field w-100" oninput="checkPokemonName();">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="cell">
+            <label>포켓몬 속성 <i class="fa-solid fa-asterisk red"></i></label>
+            <input type="text" name="pokemonType" placeholder="한글 10글자 이내" 
+                    class="field w-100" oninput="checkPokemonType();">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="cell mt-40">
+            <button type="submit" class="btn btn-positive w-100">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>저장하기</span>
+            </button>
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>
